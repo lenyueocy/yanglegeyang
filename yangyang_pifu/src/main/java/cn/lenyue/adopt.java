@@ -12,11 +12,12 @@ import java.util.Scanner;
 public class adopt {
 
     //在这里吧token替换
-    private static String token_or_t = "";
+    private static String token_or_t = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQ0MTY4NzcsIm5iZiI6MTY2MzMxNDY3NywiaWF0IjoxNjYzMzEyODc3LCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjoyMjY2NzQwNCwiZGVidWciOiIiLCJsYW5nIjoiIn0.kWHi5IzQkQk5xmwNuo3YwC88-5fWNyjTC2tRWMoWlfo";
     //完成时间
     private static int finish_time = 1;
     //请求Url
-    private static String finish_api = "https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?skin=24";
+    //https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?rank_score=1&skin=24&rank_state=1&rank_role=1&rank_time='.$rank_time.'&t='.$t
+    private static String finish_api = "https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?skin=1";
     //okhttp3实例
     private static Builder client = HttpClient.client;
 

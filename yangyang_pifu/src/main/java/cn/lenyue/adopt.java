@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class adopt {
 
     //在这里吧token替换
-    private static String token_or_t = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQ0MTY4NzcsIm5iZiI6MTY2MzMxNDY3NywiaWF0IjoxNjYzMzEyODc3LCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjoyMjY2NzQwNCwiZGVidWciOiIiLCJsYW5nIjoiIn0.kWHi5IzQkQk5xmwNuo3YwC88-5fWNyjTC2tRWMoWlfo";
+    private static String token_or_t = "";
     //完成时间
     private static int finish_time = 1;
     //请求Url

@@ -11,7 +11,8 @@ import java.util.concurrent.TimeUnit;
 public class HttpClient {
     public static Builder client;
     private static String host = "cat-match.easygame2021.com";
-    private static String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.33";
+    private static String Referer = "https://servicewechat.com/wx141bfb9b73c970a9/16/page-frame.html";
+    private static String userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.24(0x1800182f) NetType/WIFI Language/zh_CN";
     private static String xRequestedWith = "XMLHttpRequest";
 
     static {
@@ -24,6 +25,7 @@ public class HttpClient {
                     public Response intercept(Chain chain) throws IOException {
                         Request request = chain.request().newBuilder()
                                 .addHeader("Host", host)
+                                .addHeader("Referer", Referer)
                                 .addHeader("User-Agent", userAgent)
                                 .addHeader("xRequestedWith", xRequestedWith)
                                 .build();

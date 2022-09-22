@@ -16,8 +16,7 @@ public class adopt {
     //完成时间
     private static int finish_time = 1;
     //请求Url
-    //https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?rank_score=1&skin=24&rank_state=1&rank_role=1&rank_time='.$rank_time.'&t='.$t
-    private static String finish_api = "https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?skin=1";
+    private static String finish_api = "https://cat-match.easygame2021.com/sheep/v1/game/update_user_skin?rank_score=1&skin=24&rank_state=1&rank_role=1&rank_time=%s";
     //okhttp3实例
     private static Builder client = HttpClient.client;
 
@@ -28,10 +27,10 @@ public class adopt {
             Scanner scanner = new Scanner(System.in);
             int count = scanner.nextInt();
             for (int n = 1; n <= count; n++) {
-                System.out.println("第"+n+"开始一键通关...");
+                System.out.println("第"+n+"次，开始一键通关...");
                 finish_game();
-                System.out.println("羊了个羊一键通关开始结束...");
-                Thread.sleep(100L);
+                System.out.println("羊了个羊一键通关成功"+n+"次...");
+                Thread.sleep(300L);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -42,7 +41,7 @@ public class adopt {
     public static void finish_game() {
         try {
             Request.Builder reqBuild = new Request.Builder();
-            HttpUrl.Builder urlBuilder = HttpUrl.parse(finish_api).newBuilder();
+            HttpUrl.Builder urlBuilder = HttpUrl.parse(String.format(finish_api,finish_time)).newBuilder();
             reqBuild.header("t", token_or_t);
             reqBuild.url(urlBuilder.build());
             Request request = reqBuild.build();

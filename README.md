@@ -16,6 +16,10 @@
 
 所需工具推荐任选：：Fiddler【PC】、HttpCarry【Android】、Stream【iphone】
 
+**抓包教程**
+
+1、 [Stream【iphone】教程](docs/stream/stream.md)
+
 配置参数 token 需要自行按需修改，具体怎么使用见下方使用教程，t 的值使用软件怎么获取这里不描述，自行探索，懂的都懂，感谢 issues 贡献方法老铁们，集思广益汇集力量，本内容会随时间发生改变，请自行分辨。
 
 效果图： 建议完成时间控制在几分钟到几十分钟不等。
